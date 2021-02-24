@@ -17,6 +17,8 @@ document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
 var json = "[{\"org_id\":2,\"dc_id\":14589,\"parent_dc_id\":14589,\"pt_id\":null,\"dc_name\":\"Chat and Video Conference\",\"dc_details\":null,\"discussion_class\":\"PUBLIC_GROUP\",\"is_deleted\":0,\"access_roles\":\"-\",\"authorized_roles\":null,\"entered_by\":-2,\"entered_on\":\"2021-02-11T12:26:32.371393+01:00\",\"last_updated_by\":-2,\"last_updated_on\":\"2021-02-11T12:26:32.371393+01:00\"}, \n {\"org_id\":2,\"dc_id\":14590,\"parent_dc_id\":14590,\"pt_id\":null,\"dc_name\":\"Erfan,Rafsan,Ashiqur\",\"dc_details\":null,\"discussion_class\":\"PRIVATE_GROUP\",\"is_deleted\":0,\"access_roles\":\"-\",\"authorized_roles\":null,\"entered_by\":-2,\"entered_on\":\"2021-02-11T12:27:18.801423+01:00\",\"last_updated_by\":-2,\"last_updated_on\":\"2021-02-11T12:27:18.801423+01:00\"}]";
 
 // Converting JSON-encoded string to JS object
+
+
 var j_obj = JSON.parse(json);
 var string_obj= JSON.stringify(json);
 
@@ -26,6 +28,15 @@ document.getElementById("demo").innerHTML =  obj.dc_id;
 
 console.log(j_obj[0].dc_name); //working
 console.log(string_obj);
+
+
+function ret_json(org_id,dc_id,bp_id,role_code){
+    var str='[{"org_id":"'+org_id+'","dc_id":"'+dc_id+'","bp_id":"'+bp_id+'","role_code":"'+role_code+'"}]';
+    var obj=JSON.parse(str);
+    console.log(obj)
+}
+
+
 
 
 </script>

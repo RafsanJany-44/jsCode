@@ -30,12 +30,14 @@ console.log(j_obj[0].dc_name); //working
 console.log(string_obj);
 
 
+
+
 function ret_json(org_id,dc_id,bp_id,role_code){
     var str='[{"org_id":"'+org_id+'","dc_id":"'+dc_id+'","bp_id":"'+bp_id+'","role_code":"'+role_code+'"}]';
     var obj=JSON.parse(str);
     console.log(obj)
 }
-
+ ret_json(2,3,4,'rafsan');
 
 
 

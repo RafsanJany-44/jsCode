@@ -45,7 +45,7 @@ function ret_json(org_id,dc_id,bp_id,role_code){
 
 
 
-function gen_json(query,org_id,dc_name,dis_clas,bp_id,role_code){
+function groupAdd(query,org_id,dc_name,dis_clas,bp_id,role_code){
     var query='';
     var members='';
     for(var i=0; i<bp_id.length; i++){
@@ -53,11 +53,11 @@ function gen_json(query,org_id,dc_name,dis_clas,bp_id,role_code){
         if (i<bp_id.length-1){members=members+',';}
     }
     members='['+members+']';
-    qur="'{"+'"org_id":'+'"'+org_id+'",'+'"dc_name":'+'"'+dc_name+'",'+'"diccusion_class":'+'"'+dis_clas+'",'+
-    '"members":'+members+"'}";
-    console.log(qur);
+    query="'{"+'"org_id":'+'"'+org_id+'",'+'"dc_name":'+'"'+dc_name+'",'+'"diccusion_class":'+'"'+dis_clas+'",'+
+    '"members":'+members+"}'";
+    return query
 }
-gen_json(2,3434,"helo world","no class",["3","5","6","7"],["anything","nothing","something","allthing"]);
+console.log(groupAdd(2,3434,"helo world","no class",["3","5","6","7"],["anything","nothing","something","allthing"]));
 
 
 

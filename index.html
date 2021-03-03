@@ -42,6 +42,7 @@ function ret_json(org_id,dc_id,bp_id,role_code){
 //'{"org_id": "2","dc_name":"rj test 18","discussion_class": "PUBLIC_GROUP","members":[{"bp_id":"7","role_code":"$CGPART"},{"bp_id":"8","role_code":"$CGPART"},{"bp_id":"9","role_code":"$CGPART"}]}'
 
 
+
 function gen_json(){
     var org_id=2;
     var dc_name="ada lovelace";
@@ -51,7 +52,8 @@ function gen_json(){
     var role_code=["something","something","else","something"];
     
     for(var i=0; i<bp_id.length; i++){
-        members=members+'"bp_id"'+':'+bp_id[i]+','+'"role_code"'+':'+role_code[i];
+        members=members+'{"bp_id"'+':"'+bp_id[i]+'",'+'"role_code"'+':"'+role_code[i]+'"}';
+        if (i<bp_id.length-1){members=members+',';}
     }
     console.log(members);
 

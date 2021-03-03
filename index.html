@@ -44,6 +44,7 @@ function ret_json(org_id,dc_id,bp_id,role_code){
 
 
 function gen_json(){
+    var qur='';
     var org_id=2;
     var dc_name="ada lovelace";
     var dis_clas="proogramming";
@@ -55,6 +56,8 @@ function gen_json(){
         members=members+'{"bp_id"'+':"'+bp_id[i]+'",'+'"role_code"'+':"'+role_code[i]+'"}';
         if (i<bp_id.length-1){members=members+',';}
     }
+    members='['+members+']';
+    
     console.log(members);
 
 

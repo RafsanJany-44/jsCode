@@ -57,10 +57,9 @@ function gen_json(){
         if (i<bp_id.length-1){members=members+',';}
     }
     members='['+members+']';
-    
-    console.log(members);
-
-
+    qur="'{"+'"org_id":'+'"'+org_id+'",'+'"dc_name":'+'"'+dc_name+'",'+'"diccusion_class":'+'"'+dis_clas+'",'+
+    '"members":'+members+"'}";
+    console.log(qur);
 }
 gen_json();
 

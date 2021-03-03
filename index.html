@@ -48,9 +48,6 @@ function ret_json(org_id,dc_id,bp_id,role_code){
 function gen_json(query,org_id,dc_name,dis_clas,bp_id,role_code){
     var query='';
     var members='';
-    var bp_id=["2","3","4","5"];
-    var role_code=["something","something","else","something"];
-    
     for(var i=0; i<bp_id.length; i++){
         members=members+'{"bp_id"'+':"'+bp_id[i]+'",'+'"role_code"'+':"'+role_code[i]+'"}';
         if (i<bp_id.length-1){members=members+',';}
@@ -60,7 +57,7 @@ function gen_json(query,org_id,dc_name,dis_clas,bp_id,role_code){
     '"members":'+members+"'}";
     console.log(qur);
 }
-gen_json(2,3434,);
+gen_json(2,3434,"helo world","no class",["3","5","6","7"],["anything","nothing","something","allthing"]);
 
 
 

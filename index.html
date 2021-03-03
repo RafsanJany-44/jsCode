@@ -7,27 +7,6 @@
 <p id="demo"></p>
 
 <script>
-var txt = '{"name":"John", "age":30, "city":"New York"}'
-var obj = JSON.parse(txt);
-document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
-
-
-
-// Store JSON data in a JS variable
-var json = "[{\"org_id\":2,\"dc_id\":14589,\"parent_dc_id\":14589,\"pt_id\":null,\"dc_name\":\"Chat and Video Conference\",\"dc_details\":null,\"discussion_class\":\"PUBLIC_GROUP\",\"is_deleted\":0,\"access_roles\":\"-\",\"authorized_roles\":null,\"entered_by\":-2,\"entered_on\":\"2021-02-11T12:26:32.371393+01:00\",\"last_updated_by\":-2,\"last_updated_on\":\"2021-02-11T12:26:32.371393+01:00\"}, \n {\"org_id\":2,\"dc_id\":14590,\"parent_dc_id\":14590,\"pt_id\":null,\"dc_name\":\"Erfan,Rafsan,Ashiqur\",\"dc_details\":null,\"discussion_class\":\"PRIVATE_GROUP\",\"is_deleted\":0,\"access_roles\":\"-\",\"authorized_roles\":null,\"entered_by\":-2,\"entered_on\":\"2021-02-11T12:27:18.801423+01:00\",\"last_updated_by\":-2,\"last_updated_on\":\"2021-02-11T12:27:18.801423+01:00\"}]";
-
-// Converting JSON-encoded string to JS object
-
-
-var j_obj = JSON.parse(json);
-var string_obj= JSON.stringify(json);
-
-
-document.getElementById("demo").innerHTML =  obj.dc_id;
-
-
-console.log(j_obj[0].dc_name); //working
-console.log(string_obj);
 
 
 
@@ -39,9 +18,14 @@ function ret_json(org_id,dc_id,bp_id,role_code){
 }
  ret_json(2,3,4,'rafsan');
 
+
+ function printj(str){
+    var obj=JSON.parse(str);
+    console.log(obj)
+}
+
+
 //'{"org_id": "2","dc_name":"rj test 18","discussion_class": "PUBLIC_GROUP","members":[{"bp_id":"7","role_code":"$CGPART"},{"bp_id":"8","role_code":"$CGPART"},{"bp_id":"9","role_code":"$CGPART"}]}'
-
-
 
 
 
@@ -53,15 +37,16 @@ function groupAdd(query,org_id,dc_name,dis_clas,bp_id,role_code){
         if (i<bp_id.length-1){members=members+',';}
     }
     members='['+members+']';
-    query="'{"+'"org_id":'+'"'+org_id+'",'+'"dc_name":'+'"'+dc_name+'",'+'"diccusion_class":'+'"'+dis_clas+'",'+
-    '"members":'+members+"}'";
+    printj(members);
+    query="{"+'"org_id":'+'"'+org_id+'",'+'"dc_name":'+'"'+dc_name+'",'+'"diccusion_class":'+'"'+dis_clas+'",'+
+    '"members":'+members+"}";
     return query
 }
-console.log(groupAdd(2,3434,"helo world","no class",["3","5","6","7"],["anything","nothing","something","allthing"]));
+var str=(groupAdd(2,3434,"helo world","no class",["3","5","6","7"],["anything","nothing","something","allthing"]));
 
 
 
-
+printj(str);
 
 
 

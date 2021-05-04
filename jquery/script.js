@@ -31,3 +31,15 @@ document.querySelector(".pera3").innerHTML="this is a wuery wlector";
 // parrent child
 document.querySelector(".my-div a").innerHTML="-----------";
 
+// creating html element
+
+var e = document.createElement("h1");
+var text=document.createTextNode("Hello how are you???");
+var text2=document.createTextNode("this is me.")
+ e.appendChild(text);
+ var br=document.createElement("br")
+ e.appendChild(br);
+ e.appendChild(text2);
+ var m= document.getElementById("m2");
+ m.appendChild(e);
+

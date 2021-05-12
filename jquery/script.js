@@ -43,3 +43,13 @@ var text2=document.createTextNode("this is me.")
  var m= document.getElementById("m2");
  m.appendChild(e);
 
+
+
+ // creating a button
+
+ var but1 = document.createElement("button");
+ var text= document.createTextNode("Click hare");
+ but1.appendChild(text);
+ var body = document. getElementsByTagName("body")[0]; // button should inside in a body
+ body. appendChild(but1);
+

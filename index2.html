@@ -1,16 +1,36 @@
-<!DOCTYPE html>
 <html>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  color: red;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(220, 220, 245);
+  color:black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
 <body>
-<button onclick="myFunction()">Try it</button>
 
-<script>
-function myFunction() {
-  	var x = document.createElement("AUDIO");
-    x.setAttribute("src","sound1.mp3");
-	x.play();
 
-} 
-</script> 
+<div class="tooltip">The Message
+  <span class="tooltiptext" id="555">hare is the date.</span>
+</div>
 
 </body>
 </html>

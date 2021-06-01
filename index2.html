@@ -1,8 +1,7 @@
 <html>
 <style>
 .tooltip {
-  position: relative;
-  display: inline-block;
+
   border-bottom: 1px dotted black;
   color: red;
 }
@@ -15,11 +14,26 @@
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
-  /* Position the tooltip */
   position: absolute;
   z-index: 1;
 }
+
+.pl_tc_rcvd_msg {
+        clear: both;
+        float: right;
+        font-weight: normal;
+        font-size:88%;
+        text-align: right;
+        border-radius: 1em;
+        padding: 0.25em 0.75em;
+        margin: 0.0625em;
+        max-width: 70%;
+        align-self: flex-end;
+        background-color: #efefef;
+        border-top-right-radius: 0.1em;
+    }
+
+.pl_tc_rcvd_msg:hover .tooltiptext{visibility: visible;}
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -29,7 +43,15 @@
 
 
 <div class="tooltip">The Message
-  <span class="tooltiptext" id="555">hare is the date.</span>
+  <span class="tooltiptext">hare is the date.</span>
+</div>
+
+<div class="tooltip">The Message2
+  <span class="tooltiptext">hare is the date aonother.</span>
+</div>
+
+<div class="pl_tc_rcvd_msg">The Message3
+  <span class="tooltiptext">hare is the date aonother.</span>
 </div>
 
 </body>

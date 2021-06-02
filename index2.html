@@ -16,7 +16,7 @@
         border-top-right-radius: 0.1em;
     }
 
-.pl_tc_rcvd_msg .rcvd_msg_hover{
+.rcvd_msg_hover{
   
   visibility: hidden;
   background-color:#F2FBFF ;
@@ -27,14 +27,19 @@
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  right: 7%;
-  top: 4%;
+
+}
+.rcvd_msg_hover-left {
+ top: -5px;
+ bottom: auto;
+  right:128%;
 }
 
 .pl_tc_rcvd_msg:hover .rcvd_msg_hover{
   visibility: visible;
 
 }
+
 
 .pl_tc_sent_msg {
         clear: both;
@@ -55,7 +60,7 @@
 
     .pl_tc_sent_msg .sent_msg_hover{
   
-  /*visibility: hidden;
+  visibility: hidden;
   float:left;
   background-color:#F2FBFF ;
   color:black;
@@ -65,17 +70,6 @@
   padding: 5px 0px;
   position: absolute;
   z-index: 1;
-  right:87%;
-  top: 8%;*/
-  border:solid;
-border-color:#111 transparent;
-border-width:6px 6px 0 6px;
-bottom:12px;
-content:"";
-display:block;
-left:75%;
-position:absolute;
-z-index:99
 }
 
 .pl_tc_sent_msg:hover .sent_msg_hover{
@@ -85,14 +79,14 @@ z-index:99
 
 </style>
 <body>
-
-<div class="pl_tc_rcvd_msg">The Message3
-  <div class="rcvd_msg_hover">2021-06-02</div>
+<br><br><br>
+<div class="pl_tc_rcvd_msg rcvd_msg_hover-left">The Message3
+  <div class="rcvd_msg_hover">tia naki</div>
   
 </div>
 
 
-<div class="pl_tc_sent_msg">The Message3
+<div class='pl_tc_sent_msg .rcvd_msg_hover-left'>The Message3
   <div class="sent_msg_hover">2021-12-02</div>
   
 </div>

@@ -1,0 +1,48 @@
+<html>
+<style>
+
+.pl_tc_rcvd_msg {
+        clear: both;
+        float: right;
+        font-weight: normal;
+        font-size:88%;
+        text-align: right;
+        border-radius: 1em;
+        padding: 0.25em 0.75em;
+        margin: 0.0625em;
+        max-width: 70%;
+        align-self: flex-end;
+        background-color: #efefef;
+        border-top-right-radius: 0.1em;
+    }
+
+.pl_tc_rcvd_msg .msg_hover{
+  
+  visibility: hidden;
+  background-color: rgb(220, 220, 245);
+  color:black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  right: 100%;
+}
+
+.pl_tc_rcvd_msg:hover .msg_hover{
+  visibility: visible;
+
+}
+
+
+</style>
+<body>
+
+<div class="pl_tc_rcvd_msg">The Message3
+  <span class="msg_hover">here is the date another.</span>
+  
+</div>
+
+</body>
+</html>

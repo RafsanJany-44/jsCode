@@ -1,22 +1,5 @@
 <html>
 <style>
-.tooltip {
-
-  border-bottom: 1px dotted black;
-  color: red;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: rgb(220, 220, 245);
-  color:black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-}
 
 .pl_tc_rcvd_msg {
         clear: both;
@@ -33,26 +16,85 @@
         border-top-right-radius: 0.1em;
     }
 
-.pl_tc_rcvd_msg:hover .tooltiptext{visibility: visible;}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+.pl_tc_rcvd_msg .rcvd_msg_hover{
+  
+  visibility: hidden;
+  background-color:#F2FBFF ;
+  color:black;
+  width: 6%;
+  text-align: center;
+  border-radius: 8px 00px 8px 8px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  right: 7%;
+  top: 4%;
 }
+
+.pl_tc_rcvd_msg:hover .rcvd_msg_hover{
+  visibility: visible;
+
+}
+
+.pl_tc_sent_msg {
+        clear: both;
+        float: left;
+        font-weight: normal;
+        font-size:88%;
+        text-align: left;
+        border-radius: 1em;
+        padding: 0.25em 0.75em;
+        margin: 0.0625em;
+        max-width: 70%;
+        align-self: flex-start;
+        background-color: cornflowerblue;
+        color: #fff;
+        border-top-left-radius: 0.1em;
+    }
+
+
+    .pl_tc_sent_msg .sent_msg_hover{
+  
+  visibility: hidden;
+  float:left;
+  background-color:#F2FBFF ;
+  color:black;
+  width: 6%;
+  text-align: center;
+  border-radius: 0px 8px 8px 8px;
+  padding: 5px 0px;
+  position: absolute;
+  z-index: 1;
+  right:87%;
+  top: 8%;
+}
+
+.pl_tc_sent_msg:hover .sent_msg_hover{
+  visibility: visible;
+
+}
+
 </style>
 <body>
 
-
-<div class="tooltip">The Message
-  <span class="tooltiptext">hare is the date.</span>
-</div>
-
-<div class="tooltip">The Message2
-  <span class="tooltiptext">hare is the date aonother.</span>
-</div>
-
 <div class="pl_tc_rcvd_msg">The Message3
-  <span class="tooltiptext">hare is the date aonother.</span>
+  <div class="rcvd_msg_hover">2021-06-02</div>
+  
 </div>
 
+
+<div class="pl_tc_sent_msg">The Message3
+  <div class="sent_msg_hover">2021-12-02</div>
+  
+</div>
+
+<input type="text" id="ID"> 
+<button onclick="myFunction()">Try it</button>
+<script>
+  function myFunction() {
+    var x = document.getElementById("ID").value;
+    console.log(x);
+  }
+  </script>
 </body>
 </html>

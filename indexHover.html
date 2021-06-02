@@ -16,33 +16,94 @@
         border-top-right-radius: 0.1em;
     }
 
-.pl_tc_rcvd_msg .msg_hover{
+.pl_tc_rcvd_msg .rcvd_msg_hover{
   
   visibility: hidden;
-  background-color: rgb(220, 220, 245);
+  background-color:#F2FBFF ;
   color:black;
+  width: 6%;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px 00px 8px 8px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: 2px;
-  right: 100%;
+  right: 7%;
+  top: 4%;
 }
 
-.pl_tc_rcvd_msg:hover .msg_hover{
+.pl_tc_rcvd_msg:hover .rcvd_msg_hover{
   visibility: visible;
 
 }
 
+.pl_tc_sent_msg {
+        clear: both;
+        float: left;
+        font-weight: normal;
+        font-size:88%;
+        text-align: left;
+        border-radius: 1em;
+        padding: 0.25em 0.75em;
+        margin: 0.0625em;
+        max-width: 70%;
+        align-self: flex-start;
+        background-color: cornflowerblue;
+        color: #fff;
+        border-top-left-radius: 0.1em;
+    }
+
+
+    .pl_tc_sent_msg .sent_msg_hover{
+  
+  /*visibility: hidden;
+  float:left;
+  background-color:#F2FBFF ;
+  color:black;
+  width: 6%;
+  text-align: center;
+  border-radius: 0px 8px 8px 8px;
+  padding: 5px 0px;
+  position: absolute;
+  z-index: 1;
+  right:87%;
+  top: 8%;*/
+  border:solid;
+border-color:#111 transparent;
+border-width:6px 6px 0 6px;
+bottom:12px;
+content:"";
+display:block;
+left:75%;
+position:absolute;
+z-index:99
+}
+
+.pl_tc_sent_msg:hover .sent_msg_hover{
+  visibility: visible;
+
+}
 
 </style>
 <body>
 
 <div class="pl_tc_rcvd_msg">The Message3
-  <span class="msg_hover">here is the date another.</span>
+  <div class="rcvd_msg_hover">2021-06-02</div>
   
 </div>
 
+
+<div class="pl_tc_sent_msg">The Message3
+  <div class="sent_msg_hover">2021-12-02</div>
+  
+</div>
+
+<input type="text" id="ID"> 
+<button onclick="myFunction()">Try it</button>
+<script>
+  function myFunction() {
+    var x = document.getElementById("ID").value;
+    console.log(x);
+  }
+  </script>
 </body>
 </html>
